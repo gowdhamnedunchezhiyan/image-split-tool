@@ -1,3 +1,16 @@
+import os
+import shutil
+import random
+from sklearn.model_selection import train_test_split
+from collections import defaultdict
+import json
+import glob
+
+class DatasetSplitter:
+    def __init__(self, images_dir, annotations_dir=None, output_dir="split_dataset"):
+        """
+        Initialize the dataset splitter
+        
         Args:
             images_dir: Directory containing images
             annotations_dir: Directory containing annotations (if separate from images)
